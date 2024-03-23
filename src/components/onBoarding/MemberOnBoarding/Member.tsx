@@ -13,6 +13,7 @@ interface DataType {
 	name: string;
 	description: string;
 	id: string;
+	imageUrl: string;
 }
 
 const Member = () => {
@@ -74,7 +75,14 @@ const Member = () => {
 					<SearchInput className="searchInputBox" onChange={handleTextChange} onKeyDown={handleKeyDown} />
 				</SearchBox>
 				{data.map((result, idx) => (
-					<GroupCard key={idx} onModal={onModal} title={result.name} des={result.description} id={result.id} />
+					<GroupCard
+						key={idx}
+						onModal={onModal}
+						title={result.name}
+						des={result.description}
+						id={result.id}
+						imageUrl={result.imageUrl}
+					/>
 				))}
 			</Container>
 			<Character alt={'ch'} src={'/img/PaperMan.png'} />
