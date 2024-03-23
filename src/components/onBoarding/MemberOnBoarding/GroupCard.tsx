@@ -7,6 +7,7 @@ type CardProps = {
 	title: string;
 	des: string;
 	id: string;
+	imageUrl: string;
 };
 
 const GroupCard = (props: CardProps) => {
@@ -20,7 +21,7 @@ const GroupCard = (props: CardProps) => {
 	};
 	return (
 		<Wrapper>
-			<ProfileImg alt="groupProfile" src="/img/goorm.png" />
+			<ProfileImg alt="groupProfile" src={props.imageUrl} />
 			<GroupWrapper>
 				<GroupTitle>{props.title}</GroupTitle>
 				<GroupLeader>{props.des}</GroupLeader>
